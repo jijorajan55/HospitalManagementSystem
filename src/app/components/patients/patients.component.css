@@ -1,0 +1,118 @@
+.patients-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.content-section {
+  flex: 2;
+}
+
+.content-section h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.patient-list {
+  margin-bottom: 20px;
+}
+
+.patient-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e0e7ff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.patient-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #6b7280;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button:hover {
+  background-color: #4b5563;
+}
+
+.delete-button:hover {
+  background-color: #ef4444;
+}
+
+.patient-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #2563eb;
+}

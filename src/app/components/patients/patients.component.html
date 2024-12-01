@@ -1,0 +1,34 @@
+<div class="patients-container">
+  <div class="image-section">
+    <img src="assets/images/doctor.jpg" alt="Doctors" class="image" />
+  </div>
+
+  <div class="content-section">
+    <h2>Patients</h2>
+    
+    <div class="patient-list">
+      <div *ngFor="let patient of patients" class="patient-item">
+        <p><strong>Name:</strong> {{ patient.name }} - <strong>Age:</strong> {{ patient.age }} - <strong>Gender:</strong> {{ patient.gender }}</p>
+        <button (click)="editPatient(patient)" class="edit-button">Edit</button>
+        <button (click)="deletePatient(patient._id)" class="delete-button">Delete</button>
+      </div>
+    </div>
+
+    <!-- Patient Form -->
+    <form (ngSubmit)="isEditMode ? updatePatient() : addPatient()" class="patient-form">
+      <div class="form-group">
+        <label for="name">Patient Name</label>
+        <input type="text" [(ngModel)]="patientData.name" name="name" placeholder="Patient Name" required />
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" [(ngModel)]="patientData.age" name="age" placeholder="Age" required />
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" [(ngModel)]="patientData.gender" name="gender" placeholder="Gender" required />
+      </div>
+      <button type="submit" class="submit-button">{{ isEditMode ? 'Update Patient' : 'Add Patient' }}</button>
+    </form>
+  </div>
+</div>

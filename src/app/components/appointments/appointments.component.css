@@ -1,0 +1,81 @@
+.appointments-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content-container {
+  flex: 2;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appointment-item p {
+  margin: 0;
+}
+
+button {
+  background-color: #b21f55;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button.edit-button {
+  margin-right: 10px; /* Space between Edit and Delete buttons */
+}
+
+button:hover {
+  background-color: #a01a4c;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #b21f55;
+  padding: 10px;
+  font-size: 16px;
+}

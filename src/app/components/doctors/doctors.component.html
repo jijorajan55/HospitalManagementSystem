@@ -1,0 +1,30 @@
+<div class="doctors-container">
+  <div class="image-section">
+    <img src="assets/images/doctor.jpg" alt="Doctors" class="image" />
+  </div>
+
+  <div class="content-section">
+    <h2>Doctors</h2>
+
+    <div class="doctor-list">
+      <div *ngFor="let doctor of doctors" class="doctor-item">
+        <p><strong>Name:</strong> {{ doctor.name }} - <strong>Specialization:</strong> {{ doctor.specialization }}</p>
+        <button (click)="editDoctor(doctor)" class="edit-button">Edit</button>
+        <button (click)="deleteDoctor(doctor._id)" class="delete-button">Delete</button>
+      </div>
+    </div>
+
+    <!-- Doctor Form -->
+    <form (ngSubmit)="isEditMode ? updateDoctor() : addDoctor()" class="doctor-form">
+      <div class="form-group">
+        <label for="name">Doctor Name</label>
+        <input type="text" [(ngModel)]="doctorData.name" name="name" placeholder="Doctor Name" required />
+      </div>
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <input type="text" [(ngModel)]="doctorData.specialization" name="specialization" placeholder="Specialization" required />
+      </div>
+      <button type="submit" class="submit-button">{{ isEditMode ? 'Update Doctor' : 'Add Doctor' }}</button>
+    </form>
+  </div>
+</div>
